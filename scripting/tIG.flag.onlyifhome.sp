@@ -13,7 +13,7 @@ public Plugin:myinfo =
 {
 	name 		= "tInstagib - Flag - Cap only if home",
 	author 		= "Thrawn",
-	description = "Returns a flag to the base if a player of its team touches it",
+	description = "A flag can only be captured if the own flag is at home.",
 	version 	= VERSION,
 };
 

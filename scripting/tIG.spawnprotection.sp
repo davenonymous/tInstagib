@@ -19,7 +19,7 @@ public Plugin:myinfo =
 public OnPluginStart() {
 	CreateConVar("sm_tig_spawnprotection_version", VERSION, "", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY|FCVAR_DONTRECORD);
 
-	g_hCvarProtTime = CreateConVar("sm_tig_spawnprotection_time", "5.0", "Set to 0.0 to disable.", FCVAR_PLUGIN, true, 0.0);
+	g_hCvarProtTime = CreateConVar("sm_tig_spawnprotection_time", "3.0", "Set to 0.0 to disable.", FCVAR_PLUGIN, true, 0.0);
 	HookConVarChange(g_hCvarProtTime, Cvar_ChangedEnable);
 
 	HookEvent("player_spawn",       Event_PlayerSpawn);

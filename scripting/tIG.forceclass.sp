@@ -10,16 +10,16 @@ new bool:g_bEnabled;
 
 public Plugin:myinfo =
 {
-	name 		= "tInstagib - class",
+	name 		= "tInstagib - Class",
 	author 		= "Thrawn",
-	description = "Forces every player to play a specific class",
+	description = "Forces every player to play scout",
 	version 	= VERSION,
 };
 
 public OnPluginStart() {
-	CreateConVar("sm_tig_weapon_version", VERSION, "", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY|FCVAR_DONTRECORD);
+	CreateConVar("sm_tig_class_version", VERSION, "", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY|FCVAR_DONTRECORD);
 
-	g_hCvarEnabled = CreateConVar("sm_tig_class_enable", "1", "Enable tInstagib - Weapon", FCVAR_PLUGIN, true, 0.0, true, 1.0);
+	g_hCvarEnabled = CreateConVar("sm_tig_class_enable", "1", "Enable tInstagib - ForceClass", FCVAR_PLUGIN, true, 0.0, true, 1.0);
 	HookConVarChange(g_hCvarEnabled, Cvar_ChangedEnable);
 
 	//HookEvent("player_changeclass", Event_PlayerClass);
